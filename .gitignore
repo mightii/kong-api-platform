@@ -1,0 +1,21 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Terraform : le state peut contenir des secrets, il ne se versionne JAMAIS
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+!*.tfvars.example
+# Note : .terraform.lock.hcl DOIT être versionné (verrouille les versions des providers)
+
+# Secrets
+.env
+*.pem
+*.key
+
+# Divers
+.DS_Store
