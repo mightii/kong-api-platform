@@ -32,7 +32,7 @@
 | 03 | [Premiers pas avec Kong](docs/03-premier-pas-kong.md) |
 | 04 | [Terraform : infrastructure](docs/04-terraform-infra.md) |
 | 05 | [Configuration de Kong : exposer, sécuriser, gouverner](docs/05-configuration-kong.md) |
-| 06 | Observabilité *(à venir)* |
+| 06 | [Observabilité](docs/06-observabilite.md) |
 | 07 | AI Gateway *(à venir)* |
 
 Voir aussi : [décisions d'architecture](docs/decisions.md) · [passage en production](docs/production.md)

@@ -115,6 +115,7 @@ resource "docker_container" "kong" {
     "KONG_ADMIN_LISTEN=0.0.0.0:8001",
     "KONG_ADMIN_GUI_LISTEN=0.0.0.0:8002",
     "KONG_ADMIN_GUI_URL=http://localhost:8002",
+    "KONG_STATUS_LISTEN=0.0.0.0:8100",
     "KONG_PROXY_ACCESS_LOG=/dev/stdout",
     "KONG_ADMIN_ACCESS_LOG=/dev/stdout",
     "KONG_PROXY_ERROR_LOG=/dev/stderr",

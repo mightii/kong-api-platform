@@ -21,3 +21,21 @@ variable "pg_password" {
   type        = string
   sensitive   = true
 }
+
+variable "prometheus_image" {
+  description = "Image Prometheus"
+  type        = string
+  default     = "prom/prometheus:latest"
+}
+
+variable "grafana_image" {
+  description = "Image Grafana"
+  type        = string
+  default     = "grafana/grafana-oss:latest"
+}
+
+variable "grafana_admin_password" {
+  description = "Mot de passe admin de Grafana"
+  type        = string
+  sensitive   = true
+}

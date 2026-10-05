@@ -27,3 +27,8 @@ output "api_port" {
   description = "Port de l'API dans son conteneur"
   value       = 5000
 }
+
+output "grafana_url" {
+  description = "Grafana (via tunnel SSH)"
+  value       = "http://localhost:3000"
+}
