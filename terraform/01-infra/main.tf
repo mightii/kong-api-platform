@@ -17,7 +17,8 @@ resource "docker_network" "kong" {
   name = "kong-platform-net"
 
   ipam_config {
-    subnet = var.network_subnet
+    subnet  = var.network_subnet
+    gateway = cidrhost(var.network_subnet, 1)
   }
 }
 
