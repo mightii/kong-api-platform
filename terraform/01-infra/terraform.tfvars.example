@@ -1,0 +1,2 @@
+# Copier en terraform.tfvars (ignoré par git) et changer la valeur
+pg_password = "change-moi"

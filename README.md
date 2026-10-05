@@ -30,7 +30,7 @@
 | 01 | [Préparation de la VM](docs/01-preparation-vm.md) |
 | 02 | [Environnement Python](docs/02-environnement-python.md) |
 | 03 | [Premiers pas avec Kong](docs/03-premier-pas-kong.md) |
-| 04 | Terraform : infrastructure *(à venir)* |
+| 04 | [Terraform : infrastructure](docs/04-terraform-infra.md) |
 | 05 | Terraform : configuration de Kong *(à venir)* |
 | 06 | Gouvernance et dérive *(à venir)* |
 | 07 | Observabilité *(à venir)* |
