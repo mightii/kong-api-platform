@@ -1,6 +1,6 @@
 # Kong API Platform : POC « as code »
 
-> Plateforme API pour une entreprise française fictive, déployée et gouvernée entièrement avec Terraform.
+> Plateforme API pour une entreprise française fictive, propulsée par Kong Gateway et déployée as code.
 
 ## Contexte
 
@@ -15,8 +15,8 @@
 1. **Exposer** une API derrière Kong Gateway (service, route)
 2. **Sécuriser** l'accès (key-auth, consumers)
 3. **Gouverner** la consommation (rate limiting par niveau d'abonnement)
-4. **Détecter la dérive** de configuration avec `terraform plan`
-5. **Observer** le trafic (Prometheus, Grafana)
+4. **Observer** le trafic (Prometheus, Grafana)
+5. **Ouvrir à l'IA** : Kong comme AI Gateway (`ai-proxy`)
 
 ## Démarrage rapide
 
@@ -31,9 +31,9 @@
 | 02 | [Environnement Python](docs/02-environnement-python.md) |
 | 03 | [Premiers pas avec Kong](docs/03-premier-pas-kong.md) |
 | 04 | [Terraform : infrastructure](docs/04-terraform-infra.md) |
-| 05 | [Terraform : configuration de Kong](docs/05-terraform-config-kong.md) |
-| 06 | Gouvernance et dérive *(à venir)* |
-| 07 | Observabilité *(à venir)* |
+| 05 | [Configuration de Kong : exposer, sécuriser, gouverner](docs/05-configuration-kong.md) |
+| 06 | Observabilité *(à venir)* |
+| 07 | AI Gateway *(à venir)* |
 
 Voir aussi : [décisions d'architecture](docs/decisions.md) · [passage en production](docs/production.md)
 

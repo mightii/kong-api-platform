@@ -1,0 +1,47 @@
+_format_version: "3.0"
+
+# decK ne gère QUE les entités portant ce tag : il ne touche jamais au reste de la gateway.
+_info:
+  select_tags:
+    - kong-api-platform
+
+services:
+  # ------------------------------------------------------------ Acte 1 : exposer
+  - name: demo-api
+    protocol: http
+    host: demo-api          # nom du conteneur sur le réseau Docker
+    port: 5000
+    routes:
+      - name: demo-api-route
+        paths:
+          - /api
+        strip_path: true
+    plugins:
+      # ---------------------------------------------------------- Acte 2 : sécuriser
+      - name: key-auth
+        config:
+          key_names:
+            - apikey
+          hide_credentials: true   # la clé n'est pas transmise à l'API
+
+consumers:
+  # ------------------------------------------------------------ Acte 3 : gouverner
+  - username: partenaire-gold
+    custom_id: partenaire-gold
+    keyauth_credentials:
+      - key: ${{ env "DECK_GOLD_KEY" }}
+    plugins:
+      - name: rate-limiting
+        config:
+          minute: 100
+          policy: local
+
+  - username: partenaire-free
+    custom_id: partenaire-free
+    keyauth_credentials:
+      - key: ${{ env "DECK_FREE_KEY" }}
+    plugins:
+      - name: rate-limiting
+        config:
+          minute: 5
+          policy: local
